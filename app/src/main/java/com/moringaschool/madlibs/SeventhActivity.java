@@ -10,19 +10,22 @@ import android.widget.Button;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity {
-    @BindView(R.id.button) Button mPlay;
+public class SeventhActivity extends AppCompatActivity {
+    @BindView(R.id.button7) Button mNext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.seventh_activity);
+
         ButterKnife.bind(this);
 
-        mPlay.setOnClickListener(new View.OnClickListener() {
+        mNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                String secondVerb = mNext.getText().toString();
+                Intent intent = new Intent(SeventhActivity.this, EighthActivity.class);
+                intent.putExtra("secondVerb",secondVerb);
                 startActivity(intent);
             }
         });
