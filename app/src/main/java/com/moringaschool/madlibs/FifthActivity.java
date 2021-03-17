@@ -6,12 +6,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class FifthActivity extends AppCompatActivity {
     @BindView(R.id.button5) Button mNext;
+    @BindView(R.id.editTextTextNoun) EditText mNoun;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +25,7 @@ public class FifthActivity extends AppCompatActivity {
         mNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String noun = mNext.getText().toString();
+                String noun = mNoun.getText().toString();
                 Intent intent = new Intent(FifthActivity.this, SixthActivity.class);
                 intent.putExtra("noun",noun);
                 startActivity(intent);
