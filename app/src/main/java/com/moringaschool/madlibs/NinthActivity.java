@@ -14,5 +14,11 @@ public class NinthActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         String food = intent.getStringExtra("food");
+        String name = intent.getStringExtra("name");
+        String adjective = intent.getStringExtra("adjective");
+        String noun = intent.getStringExtra("noun");
+        String verb = intent.getStringExtra("verb");
+        String secondVerb = intent.getStringExtra("secondVerb");
+        String thirdVerb = intent.getStringExtra("thirdVerb");
     }
 }
